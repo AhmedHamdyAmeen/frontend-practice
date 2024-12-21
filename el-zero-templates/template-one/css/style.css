@@ -4,6 +4,7 @@
     --second-color: #f6f6f6;
     --third-color: #333;
     --transition-duration: 0.3s ease;
+    --normal-line-height: 1.8;
 }
 
 /* End of The Custom Variables */
@@ -52,6 +53,7 @@ body {
 .header {
     padding: 10px 0;
 }
+
 .header .container {
     display: flex;
     justify-content: space-between;
@@ -178,7 +180,43 @@ body {
 
 .landing .intro-text p {
     font-size: 19px;
-    line-height: 1.8;
+    line-height: var(--normal-line-height, 1.8);
 }
 
 /* End of Landing Section */
+
+/* Start of Feature Section */
+
+.features {
+    padding: 60px 0;
+    background: var(--second-color, #f6f6f6);
+}
+
+.features .container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-gap: 20px;
+}
+
+.features .feat {
+    padding: 20px;
+    text-align: center;
+}
+
+.features .feat i {
+    color: var(--main-color, #10cab7);
+}
+
+.features .feat h3 {
+    font-weight: 800;
+    font-size: 22px;
+    margin: 30px 0;
+}
+
+.features .feat p {
+    line-height: var(--normal-line-height, 1.8);
+    color: #777;
+    font-size: 17px;
+}
+
+/* End of Feature Section */
