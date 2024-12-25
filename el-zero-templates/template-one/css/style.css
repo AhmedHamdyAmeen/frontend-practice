@@ -91,6 +91,12 @@ body {
     color: var(--main-color, #10cab7);
 }
 
+.card-text-style {
+    color: var(--gray-text-color, #777);
+    font-weight: 300;
+    line-height: 1.6;
+}
+
 /* End of the Global Rules */
 
 
@@ -342,3 +348,30 @@ body {
 }
 
 /* End of Services Section */
+
+
+/* Start of Portfolio Section */
+.portfolio .portfolios {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 100px;
+}
+
+.portfolio .portfolios .portfolio {
+    background: #fff;
+}
+
+.portfolio .portfolios img {
+    max-width: 100%;
+}
+
+.portfolio .portfolios .portfolio .portfolio-text {
+    padding: 20px;
+}
+
+.portfolio .portfolios .portfolio .portfolio-text h3 {
+    margin: 0;
+}
+
+/* End of Portfolio Section */
