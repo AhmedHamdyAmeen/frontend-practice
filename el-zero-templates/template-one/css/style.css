@@ -3,6 +3,8 @@
     --main-color: #10cab7;
     --second-color: #f6f6f6;
     --third-color: #333;
+    --gray-dark-color: #2c4755;
+    --gray-text-color: #777;
     --transition-duration: 0.3s ease;
     --normal-line-height: 1.8;
 }
@@ -10,6 +12,37 @@
 /* End of The Custom Variables */
 
 /* Start the Global Rules */
+.special-heading {
+    color: #ebeced;
+    font-size: 100px;
+    text-align: center;
+    font-weight: 800;
+    letter-spacing: -3px;
+    margin: 0;
+    max-width: 98vw;
+}
+
+.special-heading + p {
+    /*    plush (+) singe is used to select the next element    */
+    text-align: center;
+    margin: -30px 0 0;
+    font-size: 20px;
+    color: #797979;
+}
+
+@media (max-width: 767px) {
+    .special-heading {
+        font-size: 80px;
+    }
+
+    .special-heading + p {
+        font-size: 16px;
+        margin: -20px 0 0;
+    }
+}
+
+/* a. Special Heading */
+
 * {
     box-sizing: border-box;
 }
@@ -44,6 +77,18 @@ body {
     .container {
         width: 1170px;
     }
+}
+
+.section-padding {
+    padding: 60px 0;
+}
+
+.section-background {
+    background: var(--second-color, #f6f6f6);
+}
+
+.icon-main-color {
+    color: var(--main-color, #10cab7);
 }
 
 /* End of the Global Rules */
@@ -188,8 +233,7 @@ body {
 /* Start of Feature Section */
 
 .features {
-    padding: 60px 0;
-    background: var(--second-color, #f6f6f6);
+    /*background: var(--second-color, #f6f6f6);*/
 }
 
 .features .container {
@@ -215,8 +259,86 @@ body {
 
 .features .feat p {
     line-height: var(--normal-line-height, 1.8);
-    color: #777;
+    color: var(--gray-text-color, #777);
     font-size: 17px;
 }
 
 /* End of Feature Section */
+
+/* Start of Services Section */
+
+.services .services-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-column-gap: 30px;
+    margin: 100px 0 0 0;
+}
+
+.services .services-content .col:last-child {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.services .services-content .col .service {
+    display: flex;
+    margin-bottom: 40px;
+}
+
+@media (max-width: 767px) {
+    .services .services-content .col .service {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
+.services .services-content .service .service-icon {
+    flex-basis: 60px;
+}
+
+.services .services-content .service .service-content {
+    flex: 1;
+}
+
+.services .services-content .service .service-content h3 {
+    margin-top: 0;
+}
+
+.services .services-content .service .service-content p {
+    color: var(--gray-text-color, #777);
+    font-weight: 300;
+    line-height: 1.6;
+}
+
+.services .services-content .image-column {
+    max-width: 100%;
+    position: relative;
+    width: fit-content;
+}
+
+.services .services-content .image-column img {
+    width: 260px;
+    filter: grayscale(65%);
+}
+
+.services .services-content .image-column:before {
+    content: "";
+    /* Center Element Vertically */
+    position: absolute;
+    top: 50%;
+    transform: translate(0, -50%);
+    right: -50px;
+    width: 100px;
+    height: 120%;
+    background: var(--gray-dark-color, #2c4755);
+    z-index: -1;
+}
+
+@media (max-width: 1199px) {
+    .services .services-content .image-column {
+        display: none;
+    }
+
+}
+
+/* End of Services Section */
