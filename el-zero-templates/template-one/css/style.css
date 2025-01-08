@@ -464,3 +464,41 @@ body {
 }
 
 /* End of About Section */
+
+/* Start of Contacts Section */
+.contacts .contact-wrapper {
+    text-align: center;
+    margin-top: 40px;
+}
+
+.contacts .contact-wrapper .label {
+    font-weight: 800;
+    font-size: 2em;
+    color: var(--gray-dark-color);
+    letter-spacing: -2px;
+    margin-bottom: 15px;
+}
+
+.contacts .contact-wrapper .link {
+    color: var(--main-color);
+    font-weight: 800;
+    font-size: 1.8em;
+    display: inline-block;
+    margin-bottom: 25px;
+    text-decoration: none;
+}
+
+.contacts .contact-wrapper .social i {
+    color: var(--gray-dark-color);
+}
+@media (max-width: 767px)  {
+    .contacts .contact-wrapper .label {
+        font-size: 1.5em;
+    }
+
+    .contacts .contact-wrapper .link {
+        font-size: 1.3em;
+    }
+}
+
+/* End of Contacts Section */
