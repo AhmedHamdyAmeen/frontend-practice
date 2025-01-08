@@ -491,7 +491,8 @@ body {
 .contacts .contact-wrapper .social i {
     color: var(--gray-dark-color);
 }
-@media (max-width: 767px)  {
+
+@media (max-width: 767px) {
     .contacts .contact-wrapper .label {
         font-size: 1.5em;
     }
@@ -502,3 +503,27 @@ body {
 }
 
 /* End of Contacts Section */
+
+/* End of Footer Section */
+.footer {
+    background: var(--gray-dark-color);
+    padding: 20px;
+    color: #fff;
+    font-size: 12px;
+    text-align: center;
+    margin: 0;
+}
+
+.footer span {
+    color: var(--main-color);
+    font-weight: bold;
+}
+
+@media (min-width: 768px) {
+    .footer {
+        font-size: 18px;
+        padding: 30px 10px;
+    }
+}
+
+/* End of Footer Section */
