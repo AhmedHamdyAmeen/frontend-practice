@@ -9,6 +9,10 @@
     --normal-line-height: 1.8;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 /* End of The Custom Variables */
 
 /* Start the Global Rules */
