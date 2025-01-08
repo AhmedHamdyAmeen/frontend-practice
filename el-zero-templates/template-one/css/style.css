@@ -375,3 +375,92 @@ body {
 }
 
 /* End of Portfolio Section */
+
+/* Start of About Section */
+.about .about-wrapper {
+    margin-top: 100px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.about .about-wrapper img {
+    max-width: 100%;
+}
+
+.about .about-wrapper .image {
+    width: 250px;
+    height: 375px;
+    position: relative;
+}
+
+.about .about-wrapper .image::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: -20px;
+    width: 100px;
+    background: #ebeced;
+    height: 120%;
+    z-index: -1;
+    transform: translate(0, -50%);
+}
+
+.about .about-wrapper .image::after {
+    top: -10%;
+    content: "";
+    position: absolute;
+    width: 80px;
+    height: 250px;
+    border-left: 100px solid var(--main-color);
+    border-bottom: 100px solid var(--main-color);
+    z-index: -1;
+    right: -120px;
+}
+
+.about .about-wrapper .text {
+    flex-basis: calc(100% - 500px);
+    padding: 20px;
+}
+
+.about .about-wrapper .text p:first-of-type {
+    font-weight: bold;
+    line-height: 2;
+    margin: 0 0 50px;
+}
+
+.about .about-wrapper .text hr {
+    display: inline-block;
+    background: var(--main-color);
+    height: 2px;
+    width: 60%;
+}
+
+.about .about-wrapper .text p:last-of-type {
+    margin: 30px 0 0;
+    line-height: 2;
+    color: var(--gray-text-color);
+}
+
+/* Small Than the Medium Screens */
+@media (max-width: 992px) {
+    .about .about-wrapper {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+
+    .about .about-wrapper .image {
+        margin-bottom: 30px;
+    }
+
+    .about .about-wrapper .image::before,
+    .about .about-wrapper .image::after {
+        display: none;
+    }
+
+
+}
+
+/* End of About Section */
